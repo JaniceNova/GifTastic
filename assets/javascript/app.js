@@ -31,7 +31,7 @@ $("#giffs").empty();
 for (var i=0; i<result.length; i++){
     
 
-$("#giffs").append("<img src='" + result[i].images.fixed_height_small_still.url+ "'>" + "<p>Rating: "+ result[i].rating+ "</p><br><br>")
+$("#giffs").append("<img src='" + result[i].images.fixed_height_small_still.url + "' data-still='" +  result[i].images.fixed_height_small_still.url +"'data-animate='" ">" + "<p>Rating: "+ result[i].rating+ "</p><br><br>")
 
 
 };
