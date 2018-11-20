@@ -36,22 +36,31 @@ $("button").on("click", function () {
 
         };
 
-        $(".gif").on("click", function () {
 
-            var state = $(this).attr("data-state");
-
-            var animate = $(this).attr("data-animate")
-            var still = $(this).attr("data-still")
-
-            if (state === 'still') {
-                $(this).attr("src", animate);
-                $(this).attr("data-state", "animate");
-            }
-            else {
-                $(this).attr("src", still);
-                $(this).attr("data-state", "still");
-            }
-        });
+        
 
     });
+});
+
+$("#addGif").on("click", function (e) {
+    e.preventDefault();
+    var cartoonName = $("#cartoonButton").val();
+    console.log(cartoonName);
+});
+
+$(document).on("click", ".gif", function () {
+
+    var state = $(this).attr("data-state");
+
+    var animate = $(this).attr("data-animate")
+    var still = $(this).attr("data-still")
+
+    if (state === 'still') {
+        $(this).attr("src", animate);
+        $(this).attr("data-state", "animate");
+    }
+    else {
+        $(this).attr("src", still);
+        $(this).attr("data-state", "still");
+    }
 });
